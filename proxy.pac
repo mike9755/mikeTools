@@ -2,7 +2,8 @@ function FindProxyForURL(url, host) {
     if (
         dnsDomainIs(host, "nebula.kuaishou.com") ||
         dnsDomainIs(host, "mitm.it") ||
-        dnsDomainIs(host, "cauth.pupuapi.com")
+        dnsDomainIs(host, "cauth.pupuapi.com") ||
+        shExpMatch(host, "*.jd.com")
     ) {
         return "PROXY 192.168.15.2:18080";
     }
